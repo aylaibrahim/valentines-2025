@@ -1,0 +1,264 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecdee6; 
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ecdee6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s;
+}
+
+.active-screen {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.start-btn {
+    width: 500px;
+    cursor: pointer;
+    animation: bounce 1s infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    display: flex;
+    animation: fadeIn 1s forwards;
+}
+
+#intro-text {
+    white-space: pre-line;
+    font-size: 1.5em;
+    color: #a58590;
+    max-width: 80%;
+}
+
+#intro-screen {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro-gif {
+    width: 800px;
+    height: auto;
+}
+
+#intro-text {
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    max-width: 300px;
+    font-size: 1.5em;
+    color: #ad7789;
+    text-align: left;
+    white-space: pre-line;
+}
+
+.continue-btn {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ad7789;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.continue-btn.hidden {
+    display: none;
+}
+
+.continue-btn:not(.hidden) {
+    display: block;
+}
+
+#game-area {
+    width: 80%;
+    height: 400px;
+    background-color: #b18b93;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+
+    border: 4px solid #ad7789;
+    border-radius: 20px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.1),
+        rgba(0, 0, 0, 0.1)
+    );
+}
+
+.basket {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flower {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+}
+
+#flower-count {
+    font-size: 1.2em;
+    color: #ad7789;
+}
+
+
+#bouquet-win-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ecdee6;
+}
+
+.bouquet-win-gif {
+    width: 800px; 
+    height: auto;
+}
+
+#bouquet-win-text {
+    position: absolute;
+    top: 20%; 
+    right: 30%; 
+    max-width: 300px; 
+    font-size: 1.5em;
+    color: #ad7789;
+    text-align: left;
+    white-space: pre-line; 
+}
+
+.riddle-image {
+    width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.answer-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.answer-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ad7789;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.answer-btn:hover {
+    background-color: #7e5160;
+}
+
+#riddle-result-text {
+    font-size: 1.5em;
+    color: #ad7789;
+    margin-top: 50px;
+    white-space: pre-line;
+}
+
+.outfit-section {
+    margin-bottom: 20px;
+}
+
+.outfit-section h3 {
+    font-size: 1.5em;
+    color: #ad7789;
+    margin-bottom: 10px;
+}
+
+.outfit-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.outfit-option {
+    width: 350px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: transform 0.2s, border-color 0.2s; 
+}
+
+.outfit-option:hover {
+    transform: scale(1.05);
+    border-color: #ad7789;
+}
+
+.outfit-option.selected {
+    border-color: #ad7789;
+}
+
+#final-image {
+    width: 500px;
+    height: auto;
+    margin-top: 20px;
+    border: 4px solid #ad7789;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hearts-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}

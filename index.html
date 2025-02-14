@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happy anniversary pookie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="background-music" autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="screen active-screen" id="start-screen">
+        <h1>valentines & 1st anniversary quest :3</h1>
+        <img src="./images/start.png" class="start-btn" id="start-btn">
+    </div>
+
+    <div class="screen hidden" id="intro-screen">
+        <img src="./images/intro.gif" class="intro-gif">
+        <p id="intro-text"></p>
+        <button class="continue-btn hidden" id="continue-btn">continue</button>
+    </div>
+
+    <div class="screen hidden" id="quest-1">
+        <h2>collect a bouquet!</h2>
+        <p>catch 10 falling flowers for pookie</p>
+        <div class="game-area" id="game-area">
+            <img src="./images/basket.png" class="basket" id="basket">
+        </div>
+        <p id="flower-count">Flowers Collected: 0/10</p>
+        <button class="continue-btn hidden" id="continue-quest1-btn">continue</button>
+    </div>
+
+    <div class="screen hidden" id="bouquet-win-screen">
+        <img src=".images/bouquet_win.gif" class="bouquet-win-gif">
+        <p id="bouquet-win-text"></p>
+        <button class="continue-btn hidden" id="continue-bouquet-win-btn">continue</button>
+    </div>
+
+    <div class="screen hidden" id="quest-2">
+        <h2>solve the riddle!</h2>
+        <img src=".images/riddle.png" alt="Riddle Image" class="riddle-image">
+        <div class="answer-options">
+            <button class="answer-btn" id="answer1">i<3u</button>
+            <button class="answer-btn" id="answer2">7x<2</button>
+            <button class="answer-btn" id="answer3">ih8u</button>
+            <button class="answer-btn" id="answer4">u>42i</button>
+        </div>
+        <p id="riddle-result-text"></p>
+        <button class="continue-btn hidden" id="continue-quest2-btn">continue</button>
+    </div>
+
+<div class="screen hidden" id="quest-3">
+
+    <div class="outfit-section">
+        <h3>pick ayla's outfit</h3>
+        <div class="outfit-options">
+            <img src=".images/outfit3.png" alt="Ayla's Outfit 1" class="outfit-option" id="ayla-outfit1">
+            <img src=".images/outfit4.png" alt="Ayla's Outfit 2" class="outfit-option" id="ayla-outfit2">
+        </div>
+    </div>
+ 
+    <div class="outfit-section">
+        <h3>pick nam's outfit</h3>
+        <div class="outfit-options">
+            <img src=".images/outfit1.png" alt="Nam's Outfit 1" class="outfit-option" id="nam-outfit1">
+            <img src=".images/outfit2.png" alt="Nam's Outfit 2" class="outfit-option" id="nam-outfit2">
+        </div>
+    </div>
+
+    <button class="continue-btn hidden" id="continue-quest3-btn">save outfit</button>
+</div>
+
+    <div class="screen hidden" id="final-screen">
+        <img src=".images/hearts.gif" alt="Falling Hearts" class="hearts-overlay">
+        <h2>we're ready for our date! happy 1 year <3333</h2>
+        <p>Nam asks Ayla to be his Valentine…</p>
+        <img id="final-image" src="" alt="Final Outfit Image" class="final-outfit-image">
+    </div>   
+
+    <script src="script.js"></script>
+</body>
+</html>
